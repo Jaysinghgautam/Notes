@@ -13,11 +13,13 @@ const app=express()
 DbCon()
 
 app.use(cors({
-    credentials: true,
-    origin: 'http://localhost:5173'  // Replace with your frontend URL
+    // credentials: true,
+    // origin: 'http://localhost:5173'  // Replace with your frontend URL
+    origin: "https://notes-theta-henna.vercel.app",
+  credentials: true
 }));
  
-// mongoose.connect('mongodb+srv://jaysinghgautam:<db_password>@cluster.ibh37sk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster')
+ mongoose.connect('mongodb+srv://jaysinghgautam:<db_password>@cluster.ibh37sk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster')
 
 app.use(cookieParser())
 app.use(express.json())
