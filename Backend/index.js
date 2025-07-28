@@ -15,7 +15,8 @@ DbCon()
 app.use(cors({
     // credentials: true,
     // origin: 'http://localhost:5173'  // Replace with your frontend URL
-    origin: "https://notes-theta-henna.vercel.app",
+    origin: ["https://notes-theta-henna.vercel.app"],
+    methods:["POST","GET"],
   credentials: true
 }));
  
