@@ -13,7 +13,7 @@ import ProtectedRoutes from './routes/ProtectedRoutes';
 export default function App() {
 
 
-const API_BASE = 'https://your-backend-url.com/api'; // replace with your backend URL
+const API_BASE = 'https://notes-tau-flax.vercel.app/api'; // replace with your backend URL
 
   const register = async (name, email, password) => {
   return await axios.post(`${API_BASE}/register`, {
