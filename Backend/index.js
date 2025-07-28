@@ -5,6 +5,7 @@ import DbCon from './config/db.js'
 import AuthRoutes from './routes/Auth.js'
 import NotesRoutes from './routes/Notes.js'
 import cookieParser from 'cookie-parser'
+import mongoose from 'mongoose'
 dotenv.config()
 const PORT=process.env.PORT
 const app=express()
@@ -15,6 +16,9 @@ app.use(cors({
     credentials: true,
     origin: 'http://localhost:5173'  // Replace with your frontend URL
 }));
+ 
+// mongoose.connect('mongodb+srv://jaysinghgautam:<db_password>@cluster.ibh37sk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster')
+
 app.use(cookieParser())
 app.use(express.json())
 app.use('/auth',AuthRoutes)
