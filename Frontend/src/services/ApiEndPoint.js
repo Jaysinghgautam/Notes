@@ -1,25 +1,12 @@
 import axios from 'axios';
 
-// const instance = axios.create({
-//     // baseURL: 'http://localhost:5000',
-//     baseURL: 'http://localhost:5000',
-//     headers: {
-//         'Content-Type': 'application/json' // Removed extra space
-//     },
-//     withCredentials: true
-// });
-
-const baseURL =
-  process.env.NODE_ENV === 'development'
-    ? 'http://localhost:5000'
-    : 'https://notes-tau-flax.vercel.app';
-
-const api = axios.create({
-  baseURL,
-  withCredentials: true, // if you use cookies
+const instance = axios.create({
+    baseURL: 'http://localhost:5000',
+    headers: {
+        'Content-Type': 'application/json' // Removed extra space
+    },
+    withCredentials: true
 });
-
-// export const post = (endpoint, data) => api.post(endpoint, data);
 
 export const get = (url, params) => instance.get(url, { params });
 export const post = (url, data) => instance.post(url, data);
