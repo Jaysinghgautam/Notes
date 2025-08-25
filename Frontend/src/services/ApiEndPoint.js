@@ -9,7 +9,7 @@ import axios from 'axios';
 // });
 
 const instance = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL || "http://localhost:5000", 
+  baseURL: import.meta.env.VITE_BACKEND_URL || "https://notes-seven-theta.vercel.app", 
   headers: {
     "Content-Type": "application/json"
   },
