@@ -15,7 +15,7 @@ DbCon();
 app.use(
   cors({
     credentials: true,
-    origin: "https://notes-kpub.vercel.app", // Replace with your frontend URL
+    origin: ["https://notes-kpub.vercel.app","http://localhost:5173"] // Replace with your frontend URL
   })
 );
 app.use(cookieParser());
