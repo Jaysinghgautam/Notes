@@ -1,12 +1,21 @@
 import axios from 'axios';
 
+// const instance = axios.create({
+//     baseURL: Process.env.Backend_url, // Use environment variable or default to localhost
+//     headers: {
+//         'Content-Type': 'application/json' // Removed extra space
+//     },
+//     withCredentials: true
+// });
+
 const instance = axios.create({
-    baseURL: 'http://localhost:5000',
-    headers: {
-        'Content-Type': 'application/json' // Removed extra space
-    },
-    withCredentials: true
+  baseURL: import.meta.env.VITE_BACKEND_URL || "http://localhost:5000", 
+  headers: {
+    "Content-Type": "application/json"
+  },
+  withCredentials: true
 });
+
 
 export const get = (url, params) => instance.get(url, { params });
 export const post = (url, data) => instance.post(url, data);
