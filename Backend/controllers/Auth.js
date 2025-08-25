@@ -30,7 +30,7 @@ const Register=async(req,res)=>{
 
 const Login=async(req,res)=>{
     try {
-          const {email,password}=req.body
+        //   const {email,password}=req.body
           if (!email || !password) {
             return res.status(303).json({success:true,message:" All faild are required"})
             
